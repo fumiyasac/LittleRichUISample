@@ -5,6 +5,5 @@ target 'LittleRichUISample' do
   pod 'BubbleTransition'
   pod 'HMSegmentedControl'
   pod 'LTMorphingLabel'
-  pod 'RAMPaperSwitch'
   pod 'Gecco'
 end

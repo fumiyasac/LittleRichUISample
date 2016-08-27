@@ -29,11 +29,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>RAMPaperSwitch.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>SlideMenuControllerSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,7 +42,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5DB1250AEA2A8A464D9408AE9A18E1AC</key>
+		<key>4777A9BD0121DC38FA5052FC3CAB1D97</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,12 +57,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AC5A6DC8B3830724B05064C20B1DADB1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B8A265A0BF3D98A77D790DE249007966</key>
+		<key>BCFB403AA8F2AD2D4C19EC441E8E7631</key>
 		<dict>
 			<key>primary</key>
 			<true/>

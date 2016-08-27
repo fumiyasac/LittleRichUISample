@@ -3,7 +3,6 @@ PODS:
   - Gecco (0.2.0)
   - HMSegmentedControl (1.5.2)
   - LTMorphingLabel (0.2.1)
-  - RAMPaperSwitch (1.0.4)
   - SlideMenuControllerSwift (2.2.2)
 
 DEPENDENCIES:
@@ -11,7 +10,6 @@ DEPENDENCIES:
   - Gecco
   - HMSegmentedControl
   - LTMorphingLabel
-  - RAMPaperSwitch
   - SlideMenuControllerSwift
 
 SPEC CHECKSUMS:
@@ -19,9 +17,8 @@ SPEC CHECKSUMS:
   Gecco: 27ab0f43da3f8e844771cf641992afdd1ea09c62
   HMSegmentedControl: 83b9686022d2176fb6457d2bdb61e5d6393fed7d
   LTMorphingLabel: 1858358ea38ef4d548e1f58b648b0d08ec3a62ed
-  RAMPaperSwitch: 8fc0d32bcd0f168eadb2855528fd148afa29b37e
   SlideMenuControllerSwift: e257221100c39d49edccaaeb0238b55a0c67953a
 
-PODFILE CHECKSUM: 7a50b251df0ed8053fe215b6eb9535254407ceb4
+PODFILE CHECKSUM: 5fe87e6a8ae71f2c0d449fe7438a03ebd1d6d2d5
 
 COCOAPODS: 1.0.1

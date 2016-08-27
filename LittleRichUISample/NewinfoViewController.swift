@@ -8,14 +8,20 @@
 
 import UIKit
 import Gecco
+import LTMorphingLabel
 
-class NewinfoViewController: SpotlightViewController {
+class NewinfoViewController: SpotlightViewController, LTMorphingLabelDelegate {
 
     private var stepIndex: Int = 0
     
+    @IBOutlet weak var titleLabel: LTMorphingLabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        titleLabel.text = "What's New"
+        titleLabel.morphingEffect = .Evaporate
+
         //ライブラリ「Gecco」のSpotlightViewControllerのデリゲートを設定
         delegate = self
     }
