@@ -3,7 +3,6 @@ use_frameworks!
 target 'LittleRichUISample' do
   pod 'SlideMenuControllerSwift'
   pod 'BubbleTransition'
-  pod 'HMSegmentedControl'
   pod 'LTMorphingLabel'
   pod 'Gecco'
 end

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		615B42644FC00B2A8F95AE9F /* Pods_LittleRichUISample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAEEAC94309D60F72B47159 /* Pods_LittleRichUISample.framework */; };
+		DE68B6F51D71D6CF005AA55D /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = DE68B6F41D71D6CF005AA55D /* HMSegmentedControl.m */; };
 		DE84D1121D7087F10068BB6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84D1111D7087F10068BB6E /* AppDelegate.swift */; };
 		DE84D1141D7087F10068BB6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84D1131D7087F10068BB6E /* ViewController.swift */; };
 		DE84D1171D7087F10068BB6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE84D1151D7087F10068BB6E /* Main.storyboard */; };
@@ -45,6 +46,9 @@
 /* Begin PBXFileReference section */
 		81DE5C837D7B64DCA2480A9A /* Pods-LittleRichUISample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittleRichUISample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LittleRichUISample/Pods-LittleRichUISample.debug.xcconfig"; sourceTree = "<group>"; };
 		BEAEEAC94309D60F72B47159 /* Pods_LittleRichUISample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LittleRichUISample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE68B6F21D71D6CD005AA55D /* LittleRichUISample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LittleRichUISample-Bridging-Header.h"; sourceTree = "<group>"; };
+		DE68B6F31D71D6CF005AA55D /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
+		DE68B6F41D71D6CF005AA55D /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
 		DE84D10E1D7087F10068BB6E /* LittleRichUISample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleRichUISample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE84D1111D7087F10068BB6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE84D1131D7087F10068BB6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +108,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DE68B6F11D71D5E1005AA55D /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				DE68B6F21D71D6CD005AA55D /* LittleRichUISample-Bridging-Header.h */,
+				DE68B6F31D71D6CF005AA55D /* HMSegmentedControl.h */,
+				DE68B6F41D71D6CF005AA55D /* HMSegmentedControl.m */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
 		DE84D1051D7087F10068BB6E = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +143,7 @@
 		DE84D1101D7087F10068BB6E /* LittleRichUISample */ = {
 			isa = PBXGroup;
 			children = (
+				DE68B6F11D71D5E1005AA55D /* Library */,
 				DE84D14F1D71A9E20068BB6E /* SubContents */,
 				DE84D14E1D71A9C90068BB6E /* SideMenuContents */,
 				DE84D1451D715E270068BB6E /* Models */,
@@ -389,6 +404,7 @@
 				DE84D1441D709C490068BB6E /* SecondViewController.swift in Sources */,
 				DE84D1511D71AA1C0068BB6E /* NewinfoViewController.swift in Sources */,
 				DE84D1121D7087F10068BB6E /* AppDelegate.swift in Sources */,
+				DE68B6F51D71D6CF005AA55D /* HMSegmentedControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,10 +547,13 @@
 			baseConfigurationReference = 81DE5C837D7B64DCA2480A9A /* Pods-LittleRichUISample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = LittleRichUISample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.just1factory.LittleRichUISample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LittleRichUISample/LittleRichUISample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -543,10 +562,12 @@
 			baseConfigurationReference = FDEABE0402840644D428BAE4 /* Pods-LittleRichUISample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = LittleRichUISample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.just1factory.LittleRichUISample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LittleRichUISample/LittleRichUISample-Bridging-Header.h";
 			};
 			name = Release;
 		};

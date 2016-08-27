@@ -14,11 +14,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>HMSegmentedControl.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>LTMorphingLabel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,17 +32,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>3A63ADA6C4F8BFF59526D0A92787CB77</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>3C900E8E2449EBBCC12128A9BDA69E7F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4777A9BD0121DC38FA5052FC3CAB1D97</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>71C1DF39EE1271EA1147F993CA1439A0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,7 +47,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BCFB403AA8F2AD2D4C19EC441E8E7631</key>
+		<key>ACA680949B7EE2792D0A9850AC68AF5F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -129,12 +129,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cafe_cake" translatesAutoresizingMaskIntoConstraints="NO" id="Wp1-Bs-FTq">
+                                <rect key="frame" x="-30" y="-30" width="660" height="660"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBu-PO-SdP">
+                                <rect key="frame" x="20" y="120" width="560" height="370"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLC-Tg-gZp">
                                 <rect key="frame" x="270" y="520" width="60" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="408-f8-R7I"/>
-                                    <constraint firstAttribute="width" constant="60" id="QgD-MM-5K7"/>
+                                    <constraint firstAttribute="width" constant="60" id="0MW-7F-236"/>
+                                    <constraint firstAttribute="height" constant="60" id="g1X-D0-RV1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                 <state key="normal" title="Back">
@@ -147,12 +158,17 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="5hU-4o-5rY" firstAttribute="top" secondItem="FLC-Tg-gZp" secondAttribute="bottom" constant="20" id="CXi-6L-UT3"/>
-                            <constraint firstItem="FLC-Tg-gZp" firstAttribute="centerX" secondItem="mTV-Gf-CZO" secondAttribute="centerX" id="e4K-hp-raV"/>
+                            <constraint firstItem="cBu-PO-SdP" firstAttribute="leading" secondItem="mTV-Gf-CZO" secondAttribute="leading" constant="20" id="B32-6p-25m"/>
+                            <constraint firstItem="cBu-PO-SdP" firstAttribute="top" secondItem="oCN-sl-11n" secondAttribute="bottom" constant="100" id="Jpg-ps-ATK"/>
+                            <constraint firstItem="5hU-4o-5rY" firstAttribute="top" secondItem="FLC-Tg-gZp" secondAttribute="bottom" constant="20" id="Odo-VN-QLH"/>
+                            <constraint firstItem="FLC-Tg-gZp" firstAttribute="top" secondItem="cBu-PO-SdP" secondAttribute="bottom" constant="30" id="YGy-LV-lx8"/>
+                            <constraint firstItem="FLC-Tg-gZp" firstAttribute="centerX" secondItem="mTV-Gf-CZO" secondAttribute="centerX" id="bea-MR-6V8"/>
+                            <constraint firstAttribute="trailing" secondItem="cBu-PO-SdP" secondAttribute="trailing" constant="20" id="hMZ-N2-inF"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backSecondButton" destination="FLC-Tg-gZp" id="Ycs-p4-3aK"/>
+                        <outlet property="backgroundImageView" destination="Wp1-Bs-FTq" id="j18-To-Fum"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Vw-ah-jxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -294,4 +310,7 @@
             <point key="canvasLocation" x="1559" y="223"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cafe_cake" width="414" height="140"/>
+    </resources>
 </document>

@@ -1,24 +1,21 @@
 PODS:
   - BubbleTransition (1.0.3)
   - Gecco (0.2.0)
-  - HMSegmentedControl (1.5.2)
   - LTMorphingLabel (0.2.1)
   - SlideMenuControllerSwift (2.2.2)
 
 DEPENDENCIES:
   - BubbleTransition
   - Gecco
-  - HMSegmentedControl
   - LTMorphingLabel
   - SlideMenuControllerSwift
 
 SPEC CHECKSUMS:
   BubbleTransition: a7ae6678721406d60f604cbbea1ace505563119d
   Gecco: 27ab0f43da3f8e844771cf641992afdd1ea09c62
-  HMSegmentedControl: 83b9686022d2176fb6457d2bdb61e5d6393fed7d
   LTMorphingLabel: 1858358ea38ef4d548e1f58b648b0d08ec3a62ed
   SlideMenuControllerSwift: e257221100c39d49edccaaeb0238b55a0c67953a
 
-PODFILE CHECKSUM: 5fe87e6a8ae71f2c0d449fe7438a03ebd1d6d2d5
+PODFILE CHECKSUM: f8d7779391b87aa879242130803e5705d0c975d9
 
 COCOAPODS: 1.0.1
