@@ -8,7 +8,6 @@
 
 import UIKit
 import BubbleTransition
-import Gecco
 
 class ViewController: UIViewController {
 
@@ -205,7 +204,7 @@ extension ViewController: UITableViewDataSource {
         return cell!
     }
 
-    //indexPath.rowの値に合致するCellModelの値を
+    //indexPath.rowの値に合致するCellModelの値を選択する
     func modelAtIndexPath(indexPath: NSIndexPath) -> CellModel {
         return self.models[indexPath.row % self.models.count]
     }
