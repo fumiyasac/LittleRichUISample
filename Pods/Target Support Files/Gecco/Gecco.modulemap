@@ -1,0 +1,6 @@
+framework module Gecco {
+  umbrella header "Gecco-umbrella.h"
+
+  export *
+  module * { export * }
+}

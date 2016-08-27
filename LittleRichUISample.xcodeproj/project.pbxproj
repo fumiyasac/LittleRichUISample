@@ -1,0 +1,641 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		615B42644FC00B2A8F95AE9F /* Pods_LittleRichUISample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAEEAC94309D60F72B47159 /* Pods_LittleRichUISample.framework */; };
+		DE84D1121D7087F10068BB6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84D1111D7087F10068BB6E /* AppDelegate.swift */; };
+		DE84D1141D7087F10068BB6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84D1131D7087F10068BB6E /* ViewController.swift */; };
+		DE84D1171D7087F10068BB6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE84D1151D7087F10068BB6E /* Main.storyboard */; };
+		DE84D1191D7087F10068BB6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE84D1181D7087F10068BB6E /* Assets.xcassets */; };
+		DE84D11C1D7087F10068BB6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE84D11A1D7087F10068BB6E /* LaunchScreen.storyboard */; };
+		DE84D1271D7087F20068BB6E /* LittleRichUISampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84D1261D7087F20068BB6E /* LittleRichUISampleTests.swift */; };
+		DE84D1321D7087F20068BB6E /* LittleRichUISampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84D1311D7087F20068BB6E /* LittleRichUISampleUITests.swift */; };
+		DE84D1401D7095880068BB6E /* RightMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84D13F1D7095880068BB6E /* RightMenuViewController.swift */; };
+		DE84D1421D7095A20068BB6E /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84D1411D7095A20068BB6E /* LeftMenuViewController.swift */; };
+		DE84D1441D709C490068BB6E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84D1431D709C490068BB6E /* SecondViewController.swift */; };
+		DE84D1481D715E750068BB6E /* ParallaxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84D1461D715E750068BB6E /* ParallaxTableViewCell.swift */; };
+		DE84D1491D715E750068BB6E /* ParallaxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE84D1471D715E750068BB6E /* ParallaxTableViewCell.xib */; };
+		DE84D14B1D71618D0068BB6E /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84D14A1D71618D0068BB6E /* CellModel.swift */; };
+		DE84D14D1D7186230068BB6E /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84D14C1D7186230068BB6E /* DescriptionViewController.swift */; };
+		DE84D1511D71AA1C0068BB6E /* NewinfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84D1501D71AA1C0068BB6E /* NewinfoViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE84D1231D7087F20068BB6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE84D1061D7087F10068BB6E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE84D10D1D7087F10068BB6E;
+			remoteInfo = LittleRichUISample;
+		};
+		DE84D12E1D7087F20068BB6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE84D1061D7087F10068BB6E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE84D10D1D7087F10068BB6E;
+			remoteInfo = LittleRichUISample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		81DE5C837D7B64DCA2480A9A /* Pods-LittleRichUISample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittleRichUISample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LittleRichUISample/Pods-LittleRichUISample.debug.xcconfig"; sourceTree = "<group>"; };
+		BEAEEAC94309D60F72B47159 /* Pods_LittleRichUISample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LittleRichUISample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE84D10E1D7087F10068BB6E /* LittleRichUISample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleRichUISample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE84D1111D7087F10068BB6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DE84D1131D7087F10068BB6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DE84D1161D7087F10068BB6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DE84D1181D7087F10068BB6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE84D11B1D7087F10068BB6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DE84D11D1D7087F10068BB6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE84D1221D7087F20068BB6E /* LittleRichUISampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LittleRichUISampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE84D1261D7087F20068BB6E /* LittleRichUISampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LittleRichUISampleTests.swift; sourceTree = "<group>"; };
+		DE84D1281D7087F20068BB6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE84D12D1D7087F20068BB6E /* LittleRichUISampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LittleRichUISampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE84D1311D7087F20068BB6E /* LittleRichUISampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LittleRichUISampleUITests.swift; sourceTree = "<group>"; };
+		DE84D1331D7087F20068BB6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE84D13F1D7095880068BB6E /* RightMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightMenuViewController.swift; sourceTree = "<group>"; };
+		DE84D1411D7095A20068BB6E /* LeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
+		DE84D1431D709C490068BB6E /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		DE84D1461D715E750068BB6E /* ParallaxTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxTableViewCell.swift; sourceTree = "<group>"; };
+		DE84D1471D715E750068BB6E /* ParallaxTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParallaxTableViewCell.xib; sourceTree = "<group>"; };
+		DE84D14A1D71618D0068BB6E /* CellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
+		DE84D14C1D7186230068BB6E /* DescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		DE84D1501D71AA1C0068BB6E /* NewinfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewinfoViewController.swift; sourceTree = "<group>"; };
+		FDEABE0402840644D428BAE4 /* Pods-LittleRichUISample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittleRichUISample.release.xcconfig"; path = "Pods/Target Support Files/Pods-LittleRichUISample/Pods-LittleRichUISample.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE84D10B1D7087F10068BB6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				615B42644FC00B2A8F95AE9F /* Pods_LittleRichUISample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE84D11F1D7087F20068BB6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE84D12A1D7087F20068BB6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AAE3EB120D2BE889166587E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				81DE5C837D7B64DCA2480A9A /* Pods-LittleRichUISample.debug.xcconfig */,
+				FDEABE0402840644D428BAE4 /* Pods-LittleRichUISample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DE84D1051D7087F10068BB6E = {
+			isa = PBXGroup;
+			children = (
+				DE84D1101D7087F10068BB6E /* LittleRichUISample */,
+				DE84D1251D7087F20068BB6E /* LittleRichUISampleTests */,
+				DE84D1301D7087F20068BB6E /* LittleRichUISampleUITests */,
+				DE84D10F1D7087F10068BB6E /* Products */,
+				AAE3EB120D2BE889166587E1 /* Pods */,
+				E16A7EB73636ADC8CE714DD7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DE84D10F1D7087F10068BB6E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE84D10E1D7087F10068BB6E /* LittleRichUISample.app */,
+				DE84D1221D7087F20068BB6E /* LittleRichUISampleTests.xctest */,
+				DE84D12D1D7087F20068BB6E /* LittleRichUISampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE84D1101D7087F10068BB6E /* LittleRichUISample */ = {
+			isa = PBXGroup;
+			children = (
+				DE84D14F1D71A9E20068BB6E /* SubContents */,
+				DE84D14E1D71A9C90068BB6E /* SideMenuContents */,
+				DE84D1451D715E270068BB6E /* Models */,
+				DE84D1111D7087F10068BB6E /* AppDelegate.swift */,
+				DE84D1131D7087F10068BB6E /* ViewController.swift */,
+				DE84D1431D709C490068BB6E /* SecondViewController.swift */,
+				DE84D1151D7087F10068BB6E /* Main.storyboard */,
+				DE84D1181D7087F10068BB6E /* Assets.xcassets */,
+				DE84D11A1D7087F10068BB6E /* LaunchScreen.storyboard */,
+				DE84D11D1D7087F10068BB6E /* Info.plist */,
+			);
+			path = LittleRichUISample;
+			sourceTree = "<group>";
+		};
+		DE84D1251D7087F20068BB6E /* LittleRichUISampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				DE84D1261D7087F20068BB6E /* LittleRichUISampleTests.swift */,
+				DE84D1281D7087F20068BB6E /* Info.plist */,
+			);
+			path = LittleRichUISampleTests;
+			sourceTree = "<group>";
+		};
+		DE84D1301D7087F20068BB6E /* LittleRichUISampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DE84D1311D7087F20068BB6E /* LittleRichUISampleUITests.swift */,
+				DE84D1331D7087F20068BB6E /* Info.plist */,
+			);
+			path = LittleRichUISampleUITests;
+			sourceTree = "<group>";
+		};
+		DE84D1451D715E270068BB6E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DE84D1461D715E750068BB6E /* ParallaxTableViewCell.swift */,
+				DE84D1471D715E750068BB6E /* ParallaxTableViewCell.xib */,
+				DE84D14A1D71618D0068BB6E /* CellModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		DE84D14E1D71A9C90068BB6E /* SideMenuContents */ = {
+			isa = PBXGroup;
+			children = (
+				DE84D13F1D7095880068BB6E /* RightMenuViewController.swift */,
+				DE84D1411D7095A20068BB6E /* LeftMenuViewController.swift */,
+			);
+			name = SideMenuContents;
+			sourceTree = "<group>";
+		};
+		DE84D14F1D71A9E20068BB6E /* SubContents */ = {
+			isa = PBXGroup;
+			children = (
+				DE84D14C1D7186230068BB6E /* DescriptionViewController.swift */,
+				DE84D1501D71AA1C0068BB6E /* NewinfoViewController.swift */,
+			);
+			name = SubContents;
+			sourceTree = "<group>";
+		};
+		E16A7EB73636ADC8CE714DD7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEAEEAC94309D60F72B47159 /* Pods_LittleRichUISample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE84D10D1D7087F10068BB6E /* LittleRichUISample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE84D1361D7087F20068BB6E /* Build configuration list for PBXNativeTarget "LittleRichUISample" */;
+			buildPhases = (
+				66F17CB7D6229A429CE7DB9F /* [CP] Check Pods Manifest.lock */,
+				DE84D10A1D7087F10068BB6E /* Sources */,
+				DE84D10B1D7087F10068BB6E /* Frameworks */,
+				DE84D10C1D7087F10068BB6E /* Resources */,
+				460C6E865D14B60253C8C5E7 /* [CP] Embed Pods Frameworks */,
+				086DEDA2B68D13DDC93A8C15 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LittleRichUISample;
+			productName = LittleRichUISample;
+			productReference = DE84D10E1D7087F10068BB6E /* LittleRichUISample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE84D1211D7087F20068BB6E /* LittleRichUISampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE84D1391D7087F20068BB6E /* Build configuration list for PBXNativeTarget "LittleRichUISampleTests" */;
+			buildPhases = (
+				DE84D11E1D7087F20068BB6E /* Sources */,
+				DE84D11F1D7087F20068BB6E /* Frameworks */,
+				DE84D1201D7087F20068BB6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE84D1241D7087F20068BB6E /* PBXTargetDependency */,
+			);
+			name = LittleRichUISampleTests;
+			productName = LittleRichUISampleTests;
+			productReference = DE84D1221D7087F20068BB6E /* LittleRichUISampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DE84D12C1D7087F20068BB6E /* LittleRichUISampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE84D13C1D7087F20068BB6E /* Build configuration list for PBXNativeTarget "LittleRichUISampleUITests" */;
+			buildPhases = (
+				DE84D1291D7087F20068BB6E /* Sources */,
+				DE84D12A1D7087F20068BB6E /* Frameworks */,
+				DE84D12B1D7087F20068BB6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE84D12F1D7087F20068BB6E /* PBXTargetDependency */,
+			);
+			name = LittleRichUISampleUITests;
+			productName = LittleRichUISampleUITests;
+			productReference = DE84D12D1D7087F20068BB6E /* LittleRichUISampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE84D1061D7087F10068BB6E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = just1factory;
+				TargetAttributes = {
+					DE84D10D1D7087F10068BB6E = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					DE84D1211D7087F20068BB6E = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = DE84D10D1D7087F10068BB6E;
+					};
+					DE84D12C1D7087F20068BB6E = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = DE84D10D1D7087F10068BB6E;
+					};
+				};
+			};
+			buildConfigurationList = DE84D1091D7087F10068BB6E /* Build configuration list for PBXProject "LittleRichUISample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE84D1051D7087F10068BB6E;
+			productRefGroup = DE84D10F1D7087F10068BB6E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE84D10D1D7087F10068BB6E /* LittleRichUISample */,
+				DE84D1211D7087F20068BB6E /* LittleRichUISampleTests */,
+				DE84D12C1D7087F20068BB6E /* LittleRichUISampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE84D10C1D7087F10068BB6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE84D11C1D7087F10068BB6E /* LaunchScreen.storyboard in Resources */,
+				DE84D1191D7087F10068BB6E /* Assets.xcassets in Resources */,
+				DE84D1491D715E750068BB6E /* ParallaxTableViewCell.xib in Resources */,
+				DE84D1171D7087F10068BB6E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE84D1201D7087F20068BB6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE84D12B1D7087F20068BB6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		086DEDA2B68D13DDC93A8C15 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LittleRichUISample/Pods-LittleRichUISample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		460C6E865D14B60253C8C5E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LittleRichUISample/Pods-LittleRichUISample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66F17CB7D6229A429CE7DB9F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE84D10A1D7087F10068BB6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE84D1141D7087F10068BB6E /* ViewController.swift in Sources */,
+				DE84D1401D7095880068BB6E /* RightMenuViewController.swift in Sources */,
+				DE84D1481D715E750068BB6E /* ParallaxTableViewCell.swift in Sources */,
+				DE84D1421D7095A20068BB6E /* LeftMenuViewController.swift in Sources */,
+				DE84D14B1D71618D0068BB6E /* CellModel.swift in Sources */,
+				DE84D14D1D7186230068BB6E /* DescriptionViewController.swift in Sources */,
+				DE84D1441D709C490068BB6E /* SecondViewController.swift in Sources */,
+				DE84D1511D71AA1C0068BB6E /* NewinfoViewController.swift in Sources */,
+				DE84D1121D7087F10068BB6E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE84D11E1D7087F20068BB6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE84D1271D7087F20068BB6E /* LittleRichUISampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE84D1291D7087F20068BB6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE84D1321D7087F20068BB6E /* LittleRichUISampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE84D1241D7087F20068BB6E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE84D10D1D7087F10068BB6E /* LittleRichUISample */;
+			targetProxy = DE84D1231D7087F20068BB6E /* PBXContainerItemProxy */;
+		};
+		DE84D12F1D7087F20068BB6E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE84D10D1D7087F10068BB6E /* LittleRichUISample */;
+			targetProxy = DE84D12E1D7087F20068BB6E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DE84D1151D7087F10068BB6E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE84D1161D7087F10068BB6E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DE84D11A1D7087F10068BB6E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE84D11B1D7087F10068BB6E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE84D1341D7087F20068BB6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DE84D1351D7087F20068BB6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE84D1371D7087F20068BB6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81DE5C837D7B64DCA2480A9A /* Pods-LittleRichUISample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LittleRichUISample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.just1factory.LittleRichUISample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DE84D1381D7087F20068BB6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDEABE0402840644D428BAE4 /* Pods-LittleRichUISample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LittleRichUISample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.just1factory.LittleRichUISample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DE84D13A1D7087F20068BB6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LittleRichUISampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.just1factory.LittleRichUISampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LittleRichUISample.app/LittleRichUISample";
+			};
+			name = Debug;
+		};
+		DE84D13B1D7087F20068BB6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LittleRichUISampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.just1factory.LittleRichUISampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LittleRichUISample.app/LittleRichUISample";
+			};
+			name = Release;
+		};
+		DE84D13D1D7087F20068BB6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LittleRichUISampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.just1factory.LittleRichUISampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LittleRichUISample;
+			};
+			name = Debug;
+		};
+		DE84D13E1D7087F20068BB6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LittleRichUISampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.just1factory.LittleRichUISampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LittleRichUISample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE84D1091D7087F10068BB6E /* Build configuration list for PBXProject "LittleRichUISample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE84D1341D7087F20068BB6E /* Debug */,
+				DE84D1351D7087F20068BB6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE84D1361D7087F20068BB6E /* Build configuration list for PBXNativeTarget "LittleRichUISample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE84D1371D7087F20068BB6E /* Debug */,
+				DE84D1381D7087F20068BB6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE84D1391D7087F20068BB6E /* Build configuration list for PBXNativeTarget "LittleRichUISampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE84D13A1D7087F20068BB6E /* Debug */,
+				DE84D13B1D7087F20068BB6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE84D13C1D7087F20068BB6E /* Build configuration list for PBXNativeTarget "LittleRichUISampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE84D13D1D7087F20068BB6E /* Debug */,
+				DE84D13E1D7087F20068BB6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE84D1061D7087F10068BB6E /* Project object */;
+}
