@@ -8,6 +8,7 @@
 
 import UIKit
 
+//左から右へスワイプした際に表示されるメニュー用のViewController
 class LeftMenuViewController: UIViewController {
 
     override func viewDidLoad() {

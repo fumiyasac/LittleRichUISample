@@ -14,25 +14,61 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var goSecondButton: UIButton!
     @IBOutlet weak var parallaxTableView: UITableView!
-    
+
+    //ライブラリ「BubbleTransition」のインスタンスを作る
     private let transition = BubbleTransition()
+
+    //セルのセクション数
     private let sectionCount = 1
-    
+
+    //セルに表示するデータモデルの変数 ※CellModel.swift参照
     var models: [CellModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //UITableViewに関する初期設定
         parallaxTableView.delegate = self
         parallaxTableView.dataSource = self
         parallaxTableView.rowHeight = 180
 
-        models.append(CellModel(title: "Title 0", desc:  "DescriptionDetailDescriptionDetailDescriptionDetail", imageName: "cafe_cake"))
-        models.append(CellModel(title: "Title 1", desc:  "DescriptionDetailDescriptionDetailDescriptionDetail",imageName: "cafe_cake"))
-        models.append(CellModel(title: "Title 2", desc:  "DescriptionDetailDescriptionDetailDescriptionDetail",imageName: "cafe_cake"))
-        models.append(CellModel(title: "Title 3", desc:  "DescriptionDetailDescriptionDetailDescriptionDetail",imageName: "cafe_cake"))
-        models.append(CellModel(title: "Title 4", desc:  "DescriptionDetailDescriptionDetailDescriptionDetail",imageName: "cafe_cake"))
-        
+        //サンプルデータをCellModelに投入する
+        models.append(
+            CellModel(
+                title: "Happy Faces",
+                desc: "The feeling of a smile and thanks.",
+                imageName: "image1"
+            )
+        )
+        models.append(
+            CellModel(
+                title: "Wedding Dress",
+                desc: "The fine weather figure which remains in the memory.",
+                imageName: "image2"
+            )
+        )
+        models.append(
+            CellModel(
+                title: "Beautiful Dinner",
+                desc: "With a feeling of the hospitality.",
+                imageName: "image3"
+            )
+        )
+        models.append(
+            CellModel(
+                title: "Wedding Cake",
+                desc: "Collaboration first in couples for the first time.",
+                imageName: "image4"
+            )
+        )
+        models.append(
+            CellModel(
+                title: "Pair Rings",
+                desc: "As proof to promise everlasting love to.",
+                imageName: "image5"
+            )
+        )
+
         //Xibのクラスを読み込む宣言を行う
         let nibDefault:UINib = UINib(nibName: "ParallaxTableViewCell", bundle: nil)
         parallaxTableView.registerNib(nibDefault, forCellReuseIdentifier: "ParallaxTableViewCell")
@@ -41,6 +77,7 @@ class ViewController: UIViewController {
         goSecondButton.layer.cornerRadius = CGFloat(30)
     }
 
+    //ライブラリ「Gecco」を介して表示されるコントローラーを表示するアクション
     @IBAction func descriptionAlertAction(sender: AnyObject) {
         doDescriptionAlert()
     }
@@ -49,6 +86,7 @@ class ViewController: UIViewController {
         doNewinfoAlert()
     }
 
+    //ライブラリ「Gecco」を介して表示されるコントローラーを決める
     private func doDescriptionAlert() {
 
         let descriptionViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("DescriptionAlert") as! DescriptionViewController
@@ -62,11 +100,8 @@ class ViewController: UIViewController {
         newinfoViewController.alpha = 0.75
         presentViewController(newinfoViewController, animated: true, completion: nil)
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 
+    //BubbleTransitionを利用したセグエの設定
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
         let controller = segue.destinationViewController
@@ -74,8 +109,16 @@ class ViewController: UIViewController {
         controller.modalPresentationStyle = .Custom
     }
 
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
 }
 
+/**
+ * BubbleTransitionのための設定をUIViewControllerTransitioningDelegateに記述
+ * JFYI: https://github.com/andreamazz/BubbleTransition
+ */
 extension ViewController: UIViewControllerTransitioningDelegate {
 
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -96,39 +139,41 @@ extension ViewController: UIViewControllerTransitioningDelegate {
 
 }
 
+//UITableViewで発火するUIScrollViewDelegateを拡張する
 extension ViewController: UIScrollViewDelegate {
 
     func scrollViewDidScroll(scrollView: UIScrollView) {
-        if (scrollView == parallaxTableView) {
+
+        //パララックスをするテーブルビューの場合は画面に表示されているセルの画像のオフセット値を変更する
+        if scrollView == parallaxTableView {
             for indexPath in parallaxTableView.indexPathsForVisibleRows! {
-                setCellImageOffset(self.parallaxTableView.cellForRowAtIndexPath(indexPath) as! ParallaxTableViewCell, indexPath: indexPath)
+                setCellImageOffset(parallaxTableView.cellForRowAtIndexPath(indexPath) as! ParallaxTableViewCell, indexPath: indexPath)
             }
         }
     }
-    
-    func setCellImageOffset(cell: ParallaxTableViewCell, indexPath: NSIndexPath) {
 
-        let cellFrame = parallaxTableView.rectForRowAtIndexPath(indexPath)
-        let cellFrameInTable = parallaxTableView.convertRect(cellFrame, toView: parallaxTableView.superview)
-        let cellOffset = cellFrameInTable.origin.y + cellFrameInTable.size.height
-        let tableHeight = parallaxTableView.bounds.size.height + cellFrameInTable.size.height
-        let cellOffsetFactor = cellOffset / tableHeight
-
-        cell.setBackgroundOffset(cellOffsetFactor)
-    }
-
+    //まだ表示されていないセルに対しても同様の効果をつける
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         
         let imageCell = cell as! ParallaxTableViewCell
         setCellImageOffset(imageCell, indexPath: indexPath)
     }
-    
+
+    //UITableViewCell内のオフセット値を再計算して視差効果をつける
+    private func setCellImageOffset(cell: ParallaxTableViewCell, indexPath: NSIndexPath) {
+        
+        let cellFrame = parallaxTableView.rectForRowAtIndexPath(indexPath)
+        let cellFrameInTable = parallaxTableView.convertRect(cellFrame, toView: parallaxTableView.superview)
+        let cellOffset = cellFrameInTable.origin.y + cellFrameInTable.size.height
+        let tableHeight = parallaxTableView.bounds.size.height + cellFrameInTable.size.height
+        let cellOffsetFactor = cellOffset / tableHeight
+        
+        cell.setBackgroundOffset(cellOffsetFactor)
+    }
 }
 
-extension ViewController: UITableViewDelegate {
-    
-}
-
+//UITableViewのDelegate/DataSourceを拡張する
+extension ViewController: UITableViewDelegate {}
 extension ViewController: UITableViewDataSource {
     
     //テーブルの要素数を設定する ※必須
@@ -139,27 +184,29 @@ extension ViewController: UITableViewDataSource {
     //テーブルの行数を設定する ※必須
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
+        //FIXME: 仮データ時の実装なので実データと連携する際は修正する
         if section == 0 {
-            return self.models.count * 100
+            return models.count * 10
         }
         return 0
     }
 
-    func modelAtIndexPath(indexPath: NSIndexPath) -> CellModel {
-        return self.models[indexPath.row % self.models.count]
-    }
-    
     //表示するセルの中身を設定する ※必須
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ParallaxTableViewCell") as? ParallaxTableViewCell
         
-        cell!.model = self.modelAtIndexPath(indexPath)
-        
-        //TODO: 読み込む静的なコンテンツの策定と
+        //CellModelの値を
+        cell!.model = modelAtIndexPath(indexPath)
+
+        //セルのアクセサリタイプの設定
         cell!.accessoryType = UITableViewCellAccessoryType.None
         cell!.selectionStyle = UITableViewCellSelectionStyle.None
         
         return cell!
     }
-    
+
+    //indexPath.rowの値に合致するCellModelの値を
+    func modelAtIndexPath(indexPath: NSIndexPath) -> CellModel {
+        return self.models[indexPath.row % self.models.count]
+    }
 }

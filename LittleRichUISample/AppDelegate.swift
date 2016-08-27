@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 import SlideMenuControllerSwift
 
 @UIApplicationMain
@@ -17,14 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        //使用しているStoryBoardを取得
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
+
+        //左メニュー用のViewControllerを取得
         let leftViewController = storyboard.instantiateViewControllerWithIdentifier("LeftMenuViewController") as! LeftMenuViewController
-        
+
+        //右メニュー用のViewControllerを取得
         let rightViewController = storyboard.instantiateViewControllerWithIdentifier("RightMenuViewController") as! RightMenuViewController
-        
+
+        //メイン用のViewControllerを取得
         let viewController = storyboard.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
-        
+
+        //SlideMenuControllerの設定を行う
         let slideMenuController = SlideMenuController(mainViewController: viewController, leftMenuViewController: leftViewController, rightMenuViewController: rightViewController)
         self.window?.rootViewController = slideMenuController
         self.window?.makeKeyAndVisible()
