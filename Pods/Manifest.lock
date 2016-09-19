@@ -5,10 +5,20 @@ PODS:
   - SlideMenuControllerSwift (2.2.2)
 
 DEPENDENCIES:
-  - BubbleTransition
+  - BubbleTransition (from `https://github.com/andreamazz/BubbleTransition`, branch `swift2.3`)
   - Gecco
   - LTMorphingLabel
   - SlideMenuControllerSwift
+
+EXTERNAL SOURCES:
+  BubbleTransition:
+    :branch: swift2.3
+    :git: https://github.com/andreamazz/BubbleTransition
+
+CHECKOUT OPTIONS:
+  BubbleTransition:
+    :commit: ad4bf4f4046987903f9b2020387e7958c0a22a2e
+    :git: https://github.com/andreamazz/BubbleTransition
 
 SPEC CHECKSUMS:
   BubbleTransition: a7ae6678721406d60f604cbbea1ace505563119d
@@ -16,6 +26,6 @@ SPEC CHECKSUMS:
   LTMorphingLabel: 1858358ea38ef4d548e1f58b648b0d08ec3a62ed
   SlideMenuControllerSwift: e257221100c39d49edccaaeb0238b55a0c67953a
 
-PODFILE CHECKSUM: f8d7779391b87aa879242130803e5705d0c975d9
+PODFILE CHECKSUM: 62b30176631ef08cbc6232be493ae7c829de7fc8
 
 COCOAPODS: 1.0.1

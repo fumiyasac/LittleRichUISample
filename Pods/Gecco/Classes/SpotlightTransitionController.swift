@@ -35,7 +35,7 @@ class SpotlightTransitionController: NSObject, UIViewControllerAnimatedTransitio
             let destination = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey) else {
                 fatalError()
         }
-        transitionContext.containerView()?.insertSubview(destination.view, aboveSubview: source.view)
+        transitionContext.containerView().insertSubview(destination.view, aboveSubview: source.view)
         
         destination.view.alpha = 0
         

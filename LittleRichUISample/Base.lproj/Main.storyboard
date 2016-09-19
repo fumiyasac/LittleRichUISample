@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,52 +15,48 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fDM-ob-H7y">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wedding App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozh-qa-x6u">
-                                        <rect key="frame" x="0.0" y="20" width="130" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="130" id="dd1-CY-ZDE"/>
                                             <constraint firstAttribute="height" constant="40" id="jP2-yb-qNi"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCN-fD-1Ob">
-                                        <rect key="frame" x="520" y="25" width="80" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="6Do-bI-UNI"/>
                                             <constraint firstAttribute="height" constant="30" id="TaI-De-Ev8"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="12"/>
                                         <state key="normal" title="Description">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="descriptionAlertAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="js4-tA-Jd4"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7L-V6-hw0">
-                                        <rect key="frame" x="435" y="25" width="80" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="3OO-yW-G7w"/>
                                             <constraint firstAttribute="width" constant="80" id="7yB-NY-eHJ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="12"/>
                                         <state key="normal" title="What's New">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="newinfoAlertAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Efe-nU-OY4"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.80000000000000004" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="UCN-fD-1Ob" firstAttribute="leading" secondItem="x7L-V6-hw0" secondAttribute="trailing" constant="5" id="0O1-ID-NEi"/>
                                     <constraint firstAttribute="bottom" secondItem="ozh-qa-x6u" secondAttribute="bottom" id="C8x-rj-s2O"/>
@@ -74,27 +71,25 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zS5-go-oNm">
-                                <rect key="frame" x="0.0" y="60" width="600" height="540"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvu-gD-SMq">
-                                <rect key="frame" x="270" y="520" width="60" height="60"/>
-                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="Z0q-pJ-tZv"/>
                                     <constraint firstAttribute="height" constant="60" id="Z5h-U0-2W4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                 <state key="normal" title="Tour">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="sMF-XW-cmJ" kind="presentation" id="EIE-2H-Xtq"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fDM-ob-H7y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="63l-HX-5S4"/>
                             <constraint firstItem="fDM-ob-H7y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Crc-IH-Qbz"/>
@@ -126,37 +121,36 @@
                         <viewControllerLayoutGuide type="bottom" id="5hU-4o-5rY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mTV-Gf-CZO">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Wp1-Bs-FTq">
-                                <rect key="frame" x="-30" y="-30" width="660" height="660"/>
+                                <frame key="frameInset" minX="-140" width="660" height="694"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBu-PO-SdP">
-                                <rect key="frame" x="20" y="120" width="560" height="370"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLC-Tg-gZp">
-                                <rect key="frame" x="270" y="520" width="60" height="60"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="0MW-7F-236"/>
                                     <constraint firstAttribute="height" constant="60" id="g1X-D0-RV1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                 <state key="normal" title="Back">
-                                    <color key="titleColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="backSecondAction:" destination="sMF-XW-cmJ" eventType="touchUpInside" id="MWf-h8-fvX"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="cBu-PO-SdP" firstAttribute="leading" secondItem="mTV-Gf-CZO" secondAttribute="leading" constant="20" id="B32-6p-25m"/>
                             <constraint firstItem="cBu-PO-SdP" firstAttribute="top" secondItem="oCN-sl-11n" secondAttribute="bottom" constant="100" id="Jpg-ps-ATK"/>
@@ -174,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Vw-ah-jxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="228" y="957"/>
+            <point key="canvasLocation" x="228" y="956.67166416791611"/>
         </scene>
         <!--Description View Controller-->
         <scene sceneID="ZNQ-zP-M1Q">
@@ -185,28 +179,26 @@
                         <viewControllerLayoutGuide type="bottom" id="h0i-W5-0Lr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="q64-Ow-KOr">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lp4-aL-cXH">
-                                <rect key="frame" x="20" y="98" width="560" height="482"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">This App Sample is consisted some UI libraries provide to Cocoapods and Storyboard. In addition, first view makes Parallax background animation and UITableView. Pictures and Animations maybe make good user experience for user.</string>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QtF-r1-BFz" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
-                                <rect key="frame" x="0.0" y="60" width="600" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="xD1-tM-u67"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="20"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lp4-aL-cXH">
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">This App Sample is consisted some UI libraries provide to Cocoapods and Storyboard. In addition, first view makes Parallax background animation and UITableView. Pictures and Animations maybe make good user experience for user.</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="QtF-r1-BFz" firstAttribute="top" secondItem="l9i-Kj-Ccm" secondAttribute="bottom" constant="40" id="2XI-ZZ-VGI"/>
                             <constraint firstItem="Lp4-aL-cXH" firstAttribute="leading" secondItem="q64-Ow-KOr" secondAttribute="leading" constant="20" id="EOM-ai-VCJ"/>
@@ -234,28 +226,26 @@
                         <viewControllerLayoutGuide type="bottom" id="JOK-xk-ZIe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DqH-he-Bkn">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37v-XK-tW7" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
-                                <rect key="frame" x="0.0" y="60" width="600" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="s5t-o5-eGL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="20"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FB8-dc-T4n">
-                                <rect key="frame" x="20" y="98" width="560" height="482"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">2016.08.26: This App Sample Created by fumiyasac. But it's still "Work in Progress" yet. Don't miss it! If you find bugs, please make issue ticket from github. Thanks.</string>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="37v-XK-tW7" firstAttribute="leading" secondItem="DqH-he-Bkn" secondAttribute="leading" id="BQM-8D-4IG"/>
                             <constraint firstItem="FB8-dc-T4n" firstAttribute="top" secondItem="37v-XK-tW7" secondAttribute="bottom" constant="8" id="VLI-d7-TYd"/>
@@ -272,7 +262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ds-0w-svK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1559" y="957"/>
+            <point key="canvasLocation" x="1558.5" y="956.5"/>
         </scene>
         <!--Left Menu View Controller-->
         <scene sceneID="AtQ-kd-KIF">
@@ -283,9 +273,9 @@
                         <viewControllerLayoutGuide type="bottom" id="WPf-1S-5NO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bcK-Vp-6XE">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.40000000000000002" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.40000000000000002" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfP-Sp-SZx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -301,9 +291,9 @@
                         <viewControllerLayoutGuide type="bottom" id="6Pb-Jy-fjh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Gbs-Zn-ZHk">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.80000000000000004" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.80000000000000004" green="1" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3xI-dw-Kj8" userLabel="First Responder" sceneMemberID="firstResponder"/>
