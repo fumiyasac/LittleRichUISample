@@ -45,7 +45,7 @@ class ParallaxTableViewCell: UITableViewCell {
         imgBackBottomInitial = imgBottomConstraint.constant
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
 
@@ -57,7 +57,7 @@ class ParallaxTableViewCell: UITableViewCell {
     }
 
     //backgroundCellImageにかけられているAutoLayoutの制約を再計算して制約をかけ直す
-    func setBackgroundOffset(offset: CGFloat) {
+    func setBackgroundOffset(_ offset: CGFloat) {
         let boundOffset = max(0, min(1, offset))
         let pixelOffset = (1 - boundOffset) * 2 * imageParallaxFactor
         imgTopConstraint.constant = imgBackTopInitial - pixelOffset

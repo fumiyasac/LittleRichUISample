@@ -9,26 +9,26 @@
 import UIKit
 
 enum ContentsChoice: Int {
-    case Archive1 = 0
-    case Archive2
+    case archive1 = 0
+    case archive2
 }
 
 //画面の縦横サイズを取得
 struct DeviceSize {
 
     static func screenWidth() -> CGFloat {
-        return CGFloat(UIScreen.mainScreen().bounds.size.width);
+        return CGFloat(UIScreen.main.bounds.size.width);
     }
 
     static func screenHeight() -> CGFloat {
-        return CGFloat(UIScreen.mainScreen().bounds.size.height);
+        return CGFloat(UIScreen.main.bounds.size.height);
     }
 }
 
 class SecondViewController: UIViewController, UITextViewDelegate {
 
     //HMSegmentedControlの状態
-    private var contentsType: ContentsChoice = .Archive1
+    fileprivate var contentsType: ContentsChoice = .archive1
 
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var backSecondButton: UIButton!
@@ -38,7 +38,7 @@ class SecondViewController: UIViewController, UITextViewDelegate {
     var tabberSegmentedControl: HMSegmentedControl!
 
     //背景のUIImageViewを傾きによってずらす処理を実行
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
         backGroundMotion()
@@ -54,15 +54,15 @@ class SecondViewController: UIViewController, UITextViewDelegate {
     override func viewDidLayoutSubviews() {
 
         //背景のUIImageViewをプログラムで再配置する
-        backgroundImageView.frame = CGRectMake(
-            CGFloat(-40),
-            CGFloat(-40),
-            CGFloat(DeviceSize.screenWidth()+80),
-            CGFloat(DeviceSize.screenHeight()+80)
+        backgroundImageView.frame = CGRect(
+            x: CGFloat(-40),
+            y: CGFloat(-40),
+            width: CGFloat(DeviceSize.screenWidth()+80),
+            height: CGFloat(DeviceSize.screenHeight()+80)
         )
 
         //UITextViewの初期位置を戻す
-        messageText.setContentOffset(CGPointZero, animated: false)
+        messageText.setContentOffset(CGPoint.zero, animated: false)
     }
     
     override func viewDidLoad() {
@@ -70,25 +70,25 @@ class SecondViewController: UIViewController, UITextViewDelegate {
         
         //Objective-CのライブラリであるHMSegmentedControlの設定と配置
         tabberSegmentedControl = HMSegmentedControl(sectionTitles: ["First Messages", "Second Messages"])
-        tabberSegmentedControl.addTarget(self, action: #selector(SecondViewController.segmentControlTapped), forControlEvents: .ValueChanged)
-        tabberSegmentedControl.frame = CGRectMake(0, 60, view.frame.width, 50)
-        tabberSegmentedControl.backgroundColor = UIColor.clearColor()
+        tabberSegmentedControl.addTarget(self, action: #selector(SecondViewController.segmentControlTapped), for: .valueChanged)
+        tabberSegmentedControl.frame = CGRect(x: 0, y: 60, width: view.frame.width, height: 50)
+        tabberSegmentedControl.backgroundColor = UIColor.clear
         tabberSegmentedControl.titleTextAttributes = [
-            NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSForegroundColorAttributeName: UIColor.white,
             NSFontAttributeName: UIFont(name: "Optima", size: 14)!
         ]
         tabberSegmentedControl.selectionIndicatorHeight = 2.0
-        tabberSegmentedControl.selectionIndicatorColor = UIColor.whiteColor()
+        tabberSegmentedControl.selectionIndicatorColor = UIColor.white
         tabberSegmentedControl.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown
         self.view.addSubview(tabberSegmentedControl)
-        
+
         //戻るボタンを正円にする
         backSecondButton.layer.cornerRadius = CGFloat(30)
 
         //メッセージ表示部分の初期化
         messageText.delegate = self
-        messageText.selectable = false
-        messageText.editable = false
+        messageText.isSelectable = false
+        messageText.isEditable = false
         segmentControlTapped()
     }
 
@@ -97,22 +97,22 @@ class SecondViewController: UIViewController, UITextViewDelegate {
 
         let htmlText: String
 
-        if contentsType == .Archive1 {
-            htmlText = messageArray[ContentsChoice.Archive1.rawValue]
-            contentsType = .Archive2
+        if contentsType == .archive1 {
+            htmlText = messageArray[ContentsChoice.archive1.rawValue]
+            contentsType = .archive2
         } else {
-            htmlText = messageArray[ContentsChoice.Archive2.rawValue]
-            contentsType = .Archive1
+            htmlText = messageArray[ContentsChoice.archive2.rawValue]
+            contentsType = .archive1
         }
 
         //テキストフィールドのHTML化設定を行う
         let paragraph = NSMutableParagraphStyle()
         paragraph.lineHeightMultiple = 1.5
 
-        let encodedData = htmlText.dataUsingEncoding(NSUTF8StringEncoding)!
+        let encodedData = htmlText.data(using: String.Encoding.utf8)!
         let attributedOptions : [String : AnyObject] = [
-            NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType,
-            NSCharacterEncodingDocumentAttribute: NSUTF8StringEncoding,
+            NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType as AnyObject,
+            NSCharacterEncodingDocumentAttribute: String.Encoding.utf8 as AnyObject,
             NSParagraphStyleAttributeName : paragraph
         ]
         let attributedString = try! NSAttributedString(data: encodedData, options: attributedOptions, documentAttributes: nil)
@@ -125,16 +125,16 @@ class SecondViewController: UIViewController, UITextViewDelegate {
      * 引用：[iOS][Swift] パララックス(視差効果)を入れるサンプル
      * http://dev.classmethod.jp/smartphone/iphone/ios_ui_parallax/
      */
-    private func backGroundMotion() {
+    fileprivate func backGroundMotion() {
 
         let min = -42.0
         let max = 42.0
 
-        let xAxis = UIInterpolatingMotionEffect(keyPath: "center.x", type: .TiltAlongHorizontalAxis)
+        let xAxis = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
         xAxis.minimumRelativeValue = min
         xAxis.maximumRelativeValue = max
 
-        let yAxis = UIInterpolatingMotionEffect(keyPath: "center.y", type: .TiltAlongVerticalAxis)
+        let yAxis = UIInterpolatingMotionEffect(keyPath: "center.y", type: .tiltAlongVerticalAxis)
         yAxis.minimumRelativeValue = min
         yAxis.maximumRelativeValue = max
         
@@ -144,8 +144,8 @@ class SecondViewController: UIViewController, UITextViewDelegate {
         backgroundImageView.addMotionEffect(group)
     }
     
-    @IBAction func backSecondAction(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func backSecondAction(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {

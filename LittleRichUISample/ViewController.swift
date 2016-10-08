@@ -9,16 +9,16 @@
 import UIKit
 import BubbleTransition
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
 
     @IBOutlet weak var goSecondButton: UIButton!
     @IBOutlet weak var parallaxTableView: UITableView!
 
     //ライブラリ「BubbleTransition」のインスタンスを作る
-    private let transition = BubbleTransition()
+    fileprivate let transition = BubbleTransition()
 
     //セルのセクション数
-    private let sectionCount = 1
+    fileprivate let sectionCount = 1
 
     //セルに表示するデータモデルの変数 ※CellModel.swift参照
     var models: [CellModel] = []
@@ -70,42 +70,58 @@ class ViewController: UIViewController {
 
         //Xibのクラスを読み込む宣言を行う
         let nibDefault:UINib = UINib(nibName: "ParallaxTableViewCell", bundle: nil)
-        parallaxTableView.registerNib(nibDefault, forCellReuseIdentifier: "ParallaxTableViewCell")
+        parallaxTableView.register(nibDefault, forCellReuseIdentifier: "ParallaxTableViewCell")
         
         //ボタンの丸さをつくる
         goSecondButton.layer.cornerRadius = CGFloat(30)
     }
 
     //ライブラリ「Gecco」を介して表示されるコントローラーを表示するアクション
-    @IBAction func descriptionAlertAction(sender: AnyObject) {
+    @IBAction func descriptionAlertAction(_ sender: AnyObject) {
         doDescriptionAlert()
     }
     
-    @IBAction func newinfoAlertAction(sender: AnyObject) {
+    @IBAction func newinfoAlertAction(_ sender: AnyObject) {
         doNewinfoAlert()
     }
 
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        transition.transitionMode = .present
+        transition.startingPoint = goSecondButton.center
+        transition.bubbleColor = goSecondButton.backgroundColor!
+        return transition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        transition.transitionMode = .dismiss
+        transition.startingPoint = goSecondButton.center
+        transition.bubbleColor = goSecondButton.backgroundColor!
+        return transition
+    }
+    
     //ライブラリ「Gecco」を介して表示されるコントローラーを決める
-    private func doDescriptionAlert() {
+    fileprivate func doDescriptionAlert() {
 
-        let descriptionViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("DescriptionAlert") as! DescriptionViewController
+        let descriptionViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DescriptionAlert") as! DescriptionViewController
         descriptionViewController.alpha = 0.75
-        presentViewController(descriptionViewController, animated: true, completion: nil)
+        present(descriptionViewController, animated: true, completion: nil)
     }
 
-    private func doNewinfoAlert() {
+    fileprivate func doNewinfoAlert() {
 
-        let newinfoViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("NewinfoAlert") as! NewinfoViewController
+        let newinfoViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NewinfoAlert") as! NewinfoViewController
         newinfoViewController.alpha = 0.75
-        presentViewController(newinfoViewController, animated: true, completion: nil)
+        present(newinfoViewController, animated: true, completion: nil)
     }
 
     //BubbleTransitionを利用したセグエの設定
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-        let controller = segue.destinationViewController
+        let controller = segue.destination
         controller.transitioningDelegate = self
-        controller.modalPresentationStyle = .Custom
+        controller.modalPresentationStyle = .custom
     }
 
     override func didReceiveMemoryWarning() {
@@ -118,51 +134,37 @@ class ViewController: UIViewController {
  * BubbleTransitionのための設定をUIViewControllerTransitioningDelegateに記述
  * JFYI: https://github.com/andreamazz/BubbleTransition
  */
+/*
 extension ViewController: UIViewControllerTransitioningDelegate {
 
-    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-
-        transition.transitionMode = .Present
-        transition.startingPoint = goSecondButton.center
-        transition.bubbleColor = goSecondButton.backgroundColor!
-        return transition
-    }
-    
-    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-
-        transition.transitionMode = .Dismiss
-        transition.startingPoint = goSecondButton.center
-        transition.bubbleColor = goSecondButton.backgroundColor!
-        return transition
-    }
-
 }
+*/
 
 //UITableViewで発火するUIScrollViewDelegateを拡張する
 extension ViewController: UIScrollViewDelegate {
 
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
 
         //パララックスをするテーブルビューの場合は画面に表示されているセルの画像のオフセット値を変更する
         if scrollView == parallaxTableView {
             for indexPath in parallaxTableView.indexPathsForVisibleRows! {
-                setCellImageOffset(parallaxTableView.cellForRowAtIndexPath(indexPath) as! ParallaxTableViewCell, indexPath: indexPath)
+                setCellImageOffset(parallaxTableView.cellForRow(at: indexPath) as! ParallaxTableViewCell, indexPath: indexPath)
             }
         }
     }
 
     //まだ表示されていないセルに対しても同様の効果をつける
-    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    @objc(tableView:willDisplayCell:forRowAtIndexPath:) func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         let imageCell = cell as! ParallaxTableViewCell
         setCellImageOffset(imageCell, indexPath: indexPath)
     }
 
     //UITableViewCell内のオフセット値を再計算して視差効果をつける
-    private func setCellImageOffset(cell: ParallaxTableViewCell, indexPath: NSIndexPath) {
+    fileprivate func setCellImageOffset(_ cell: ParallaxTableViewCell, indexPath: IndexPath) {
         
-        let cellFrame = parallaxTableView.rectForRowAtIndexPath(indexPath)
-        let cellFrameInTable = parallaxTableView.convertRect(cellFrame, toView: parallaxTableView.superview)
+        let cellFrame = parallaxTableView.rectForRow(at: indexPath)
+        let cellFrameInTable = parallaxTableView.convert(cellFrame, to: parallaxTableView.superview)
         let cellOffset = cellFrameInTable.origin.y + cellFrameInTable.size.height
         let tableHeight = parallaxTableView.bounds.size.height + cellFrameInTable.size.height
         let cellOffsetFactor = cellOffset / tableHeight
@@ -176,12 +178,12 @@ extension ViewController: UITableViewDelegate {}
 extension ViewController: UITableViewDataSource {
     
     //テーブルの要素数を設定する ※必須
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return sectionCount
     }
     
     //テーブルの行数を設定する ※必須
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
         //FIXME: 仮データ時の実装なので実データと連携する際は修正する
         if section == 0 {
@@ -191,21 +193,21 @@ extension ViewController: UITableViewDataSource {
     }
 
     //表示するセルの中身を設定する ※必須
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ParallaxTableViewCell") as? ParallaxTableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ParallaxTableViewCell") as? ParallaxTableViewCell
         
         //CellModelの値を
         cell!.model = modelAtIndexPath(indexPath)
 
         //セルのアクセサリタイプの設定
-        cell!.accessoryType = UITableViewCellAccessoryType.None
-        cell!.selectionStyle = UITableViewCellSelectionStyle.None
+        cell!.accessoryType = UITableViewCellAccessoryType.none
+        cell!.selectionStyle = UITableViewCellSelectionStyle.none
         
         return cell!
     }
 
     //indexPath.rowの値に合致するCellModelの値を選択する
-    func modelAtIndexPath(indexPath: NSIndexPath) -> CellModel {
-        return self.models[indexPath.row % self.models.count]
+    func modelAtIndexPath(_ indexPath: IndexPath) -> CellModel {
+        return self.models[(indexPath as NSIndexPath).row % self.models.count]
     }
 }
