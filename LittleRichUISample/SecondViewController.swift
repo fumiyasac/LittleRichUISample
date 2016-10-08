@@ -112,7 +112,7 @@ class SecondViewController: UIViewController, UITextViewDelegate {
         let encodedData = htmlText.data(using: String.Encoding.utf8)!
         let attributedOptions : [String : AnyObject] = [
             NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType as AnyObject,
-            NSCharacterEncodingDocumentAttribute: String.Encoding.utf8 as AnyObject,
+            NSCharacterEncodingDocumentAttribute: NSNumber(value: String.Encoding.utf8.rawValue) as AnyObject,
             NSParagraphStyleAttributeName : paragraph
         ]
         let attributedString = try! NSAttributedString(data: encodedData, options: attributedOptions, documentAttributes: nil)

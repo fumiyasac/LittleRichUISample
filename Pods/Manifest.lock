@@ -1,43 +1,49 @@
 PODS:
   - BubbleTransition (2.0.0)
-  - Gecco (0.2.0)
+  - Gecco (1.0.0)
   - LTMorphingLabel (0.3.0)
   - SlideMenuControllerSwift (3.0.0)
 
 DEPENDENCIES:
   - BubbleTransition (from `https://github.com/andreamazz/BubbleTransition`, branch `master`)
-  - Gecco
+  - Gecco (from `https://github.com/yukiasai/Gecco`, branch `master`)
   - LTMorphingLabel (from `https://github.com/lexrus/LTMorphingLabel`, branch `swift3`)
-  - SlideMenuControllerSwift (from `https://github.com/dekatotoro/SlideMenuControllerSwift`, branch `master`)
+  - SlideMenuControllerSwift (from `https://github.com/dekatotoro/SlideMenuControllerSwift.git`, branch `master`)
 
 EXTERNAL SOURCES:
   BubbleTransition:
     :branch: master
     :git: https://github.com/andreamazz/BubbleTransition
+  Gecco:
+    :branch: master
+    :git: https://github.com/yukiasai/Gecco
   LTMorphingLabel:
     :branch: swift3
     :git: https://github.com/lexrus/LTMorphingLabel
   SlideMenuControllerSwift:
     :branch: master
-    :git: https://github.com/dekatotoro/SlideMenuControllerSwift
+    :git: https://github.com/dekatotoro/SlideMenuControllerSwift.git
 
 CHECKOUT OPTIONS:
   BubbleTransition:
     :commit: 30c08c298db9379a3919fb07b4ff350815580601
     :git: https://github.com/andreamazz/BubbleTransition
+  Gecco:
+    :commit: c501c546f25aae6a2bd32f1d43f8a804fa720b06
+    :git: https://github.com/yukiasai/Gecco
   LTMorphingLabel:
     :commit: 93c60bb1626aa96dbd5e899c82e280d7a785315d
     :git: https://github.com/lexrus/LTMorphingLabel
   SlideMenuControllerSwift:
     :commit: e21d9a7b8f1e5c052fc8abecba8961b69fc576d4
-    :git: https://github.com/dekatotoro/SlideMenuControllerSwift
+    :git: https://github.com/dekatotoro/SlideMenuControllerSwift.git
 
 SPEC CHECKSUMS:
   BubbleTransition: bdb9d71993b8d3513008e2dda6bada1ddad25d4f
-  Gecco: 27ab0f43da3f8e844771cf641992afdd1ea09c62
+  Gecco: e662f949821e742997787bad7b730ccc0052e43c
   LTMorphingLabel: 2777d8d9cb699125f48dfcd95d78bd3d77c87ade
   SlideMenuControllerSwift: 9c0a84f9a3fba51681debd7be77617094562ebcc
 
-PODFILE CHECKSUM: ac2fe5f6ffe84cff078bc3d21c4f1ab88579d053
+PODFILE CHECKSUM: 0466af332dcc8bc511728c7e2e9f77e5ec327cdf
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.0.rc.2
